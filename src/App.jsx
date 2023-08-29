@@ -4,7 +4,9 @@ import { ProductCard } from "./components/FoodList/ProductCard";
 function App() {
   return (
     <>
-      <ProductCard />
+      <div className="w-80">
+        <ProductCard />
+      </div>
     </>
   );
 }
