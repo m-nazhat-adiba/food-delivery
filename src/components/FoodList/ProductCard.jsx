@@ -20,10 +20,8 @@ export const ProductCard = () => {
         </div>
       </div>
       <div className="invisible bg-cover bg-center bg-no-repeat w-full h-[235px] rounded-tl-xl rounded-tr-xl bg-[url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')] "></div>
-      <a href="#" className="card_link">
-        <div className="duration-200 ease-out bg-cover bg-center bg-no-repeat w-full absolute h-[235px] rounded-tl-xl rounded-tr-xl top-0 group-hover:h-full group-hover:opacity-30 bg-[url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')]"></div>
-      </a>
-      <div className="z-[2] bg-[#fff] rounded-bl-xl rounded-br-xl pt-4 pb-6 px-6 group-hover:bg-transparent group-hover:relative">
+      <div className="duration-200 ease-out bg-cover bg-center bg-no-repeat w-full absolute h-[235px] rounded-tl-xl rounded-tr-xl top-0 group-hover:h-full group-hover:opacity-30 bg-[url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')]"></div>
+      <div className="z-[2] bg-[#fff] rounded-bl-xl rounded-br-xl pt-3 pb-4 px-6 group-hover:bg-transparent group-hover:relative">
         <span className="uppercase text-sm tracking-[2px] font-medium text-[#868686] text-left">
           Recipe
         </span>
