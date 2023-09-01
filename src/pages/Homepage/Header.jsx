@@ -1,16 +1,14 @@
 import React from "react";
-import NavBar from "../../components/Navigation";
 import Button from "../../components/common/Button";
 import StackedRateCard from "../../components/common/StackedRateCard";
 
 const Header = () => {
   return (
     <div>
-      <NavBar />
       <div className="flex justify-between my-2 w-full">
         <div className="flex flex-col justify-center">
           <h1 className="text-7xl font-bold leading-tight">
-            Be The Fastest in Delivering Your{" "}
+            Be The Fastest in Delivering Your
             <span className="text-red-600">Food</span>
           </h1>
           <p className="text-lg font-medium my-4 w-[90%]">
@@ -18,7 +16,9 @@ const Header = () => {
             nad free delivery
           </p>
           <Button variant="primary">Sign Up</Button>
-          <StackedRateCard />
+          <div className="mt-20">
+            <StackedRateCard />
+          </div>
         </div>
         <img src="src/assets/Banner.png" className="w-[60%] h-auto " />
       </div>
