@@ -22,7 +22,7 @@ export const ProductList = () => {
   console.log(foodData);
 
   return (
-    <div>
+    <div className="flex w-full">
       {foodData.map((item) => (
         <ProductCard productData={item} key={item.id} />
       ))}
