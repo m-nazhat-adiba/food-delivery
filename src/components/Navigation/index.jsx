@@ -1,8 +1,8 @@
 import React from "react";
-import { Navlist } from "./Navlist";
-import { NavUtility } from "./NavUtility";
+import Navlist from "./Navlist";
+import NavUtility from "./NavUtility";
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
     <div className="flex justify-between py-5">
       <img src="src/assets/icon.png" className="h-12 w-auto" />
@@ -11,3 +11,5 @@ export const NavBar = () => {
     </div>
   );
 };
+
+export default NavBar;

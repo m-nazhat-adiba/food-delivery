@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "../common/Button";
+import Button from "../common/Button";
 
-export const Navlist = () => {
+const Navlist = () => {
   return (
     <div className="flex gap-2">
       <Button variant="link">Why Us?</Button>
@@ -11,3 +11,5 @@ export const Navlist = () => {
     </div>
   );
 };
+
+export default Navlist;

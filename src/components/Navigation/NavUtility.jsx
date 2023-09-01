@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "../common/Button";
+import Button from "../common/Button";
 import { Icon } from "@iconify/react";
 
-export const NavUtility = () => {
+const NavUtility = () => {
   return (
     <div className="flex gap-5 items-center bg-white">
       <Icon icon="akar-icons:search" className="text-2xl" />
@@ -11,3 +11,5 @@ export const NavUtility = () => {
     </div>
   );
 };
+
+export default NavUtility;

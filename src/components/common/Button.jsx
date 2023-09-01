@@ -5,7 +5,7 @@ const VARIANTS = {
   link: "border-0 text-black font-medium hover:text-red-700",
 };
 
-export const Button = ({ children, variant, target }) => {
+const Button = ({ children, variant, target }) => {
   return (
     <div>
       <button
@@ -18,3 +18,5 @@ export const Button = ({ children, variant, target }) => {
     </div>
   );
 };
+
+export default Button;
