@@ -1,27 +1,36 @@
 import React from "react";
-import { NavBar } from "../../components/Navigation/index";
-import { Button } from "../../components/common/Button";
-import StackedRateCard from "../../components/common/StackedRateCard";
+import Header from "./Header";
+import BenefitSection from "./BenefitSection";
+import NavBar from "../../components/Navigation";
+import HighlightMenus from "./HighlightMenus";
+import Testimony from "./Testimony";
+import GetApp from "./GetApp";
+import Footer from "./Footer";
 
-export const Homepage = () => {
+const Homepage = () => {
   return (
     <div className="container mx-auto">
       <NavBar />
-      <div className="flex justify-between my-2 w-full">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-7xl font-bold leading-tight">
-            Be The Fastest in Delivering Your{" "}
-            <span className="text-red-600">Food</span>
-          </h1>
-          <p className="text-lg font-medium my-4 w-[90%]">
-            Our job is to filling your tummy with delicious food and with fast
-            nad free delivery
-          </p>
-          <Button variant="primary">Sign Up</Button>
-          <StackedRateCard />
-        </div>
-        <img src="src/assets/Banner.png" className="w-[60%] h-auto " />
+      <div className="mt-5">
+        <Header />
+      </div>
+      <div className="mt-28">
+        <BenefitSection />
+      </div>
+      <div className="mt-40">
+        <HighlightMenus />
+      </div>
+      <div className="mt-36">
+        <Testimony />
+      </div>
+      <div className="mt-60">
+        <GetApp />
+      </div>
+      <div className="mt-36 mb-14">
+        <Footer />
       </div>
     </div>
   );
 };
+
+export default Homepage;
