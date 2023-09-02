@@ -1,12 +1,9 @@
-import "./App.css";
-import Homepage from "./pages/Homepage";
+import { useRoutes } from "react-router";
+import { routes } from "./routes";
 
 function App() {
-  return (
-    <>
-      <Homepage />
-    </>
-  );
+  const element = useRoutes(routes);
+  return element;
 }
 
 export default App;
