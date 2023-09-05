@@ -1,5 +1,5 @@
 import React from "react";
-import InputField from "../../components/common/Input";
+import InputField from "../../../components/common/Input";
 import { Icon } from "@iconify/react";
 
 const Register = ({ handleSwitchToRegister }) => {

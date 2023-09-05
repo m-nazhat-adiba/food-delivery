@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Login from "./Login";
-import Register from "./Register";
+import Login from "./container/Login";
+import Register from "./container/Register";
 
 const LoginPage = () => {
   const [showRegister, setShowRegister] = useState(false);

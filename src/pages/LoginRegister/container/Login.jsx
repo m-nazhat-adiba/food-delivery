@@ -1,5 +1,5 @@
 import axios from "axios";
-import InputField from "../../components/common/Input";
+import InputField from "../../../components/common/Input";
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router";
