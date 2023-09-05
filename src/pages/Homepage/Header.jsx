@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex flex-col justify-center">
           <h1 className="text-7xl font-bold leading-tight">
             Be The Fastest in Delivering Your
-            <span className="text-red-600">Food</span>
+            <span className="text-red-600"> Food</span>
           </h1>
           <p className="text-lg font-medium my-4 w-[90%]">
             Our job is to filling your tummy with delicious food and with fast
