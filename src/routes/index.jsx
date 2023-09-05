@@ -9,6 +9,10 @@ export const routes = [
   },
   {
     path: "/",
-    element: <Homepage />,
+    element: (
+      <ProtectedRoute>
+        <Homepage />
+      </ProtectedRoute>
+    ),
   },
 ];
