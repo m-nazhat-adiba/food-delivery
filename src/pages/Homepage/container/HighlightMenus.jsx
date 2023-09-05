@@ -1,6 +1,5 @@
 import React from "react";
-import { ProductList } from "../../components/FoodList";
-import Button from "../../components/common/Button";
+import { ProductList } from "../../../components/FoodList";
 
 const HighlightMenus = () => {
   return (

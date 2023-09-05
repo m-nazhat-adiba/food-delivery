@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./Header";
-import BenefitSection from "./BenefitSection";
-import NavBar from "../../components/Navigation";
-import HighlightMenus from "./HighlightMenus";
-import Testimony from "./Testimony";
-import GetApp from "./GetApp";
-import Footer from "./Footer";
+import Header from "./container/Header";
+import BenefitSection from "./container/BenefitSection";
+import NavBar from "../../components/Navigation/index";
+import HighlightMenus from "./container/HighlightMenus";
+import Testimony from "./container/Testimony";
+import GetApp from "./container/GetApp";
+import Footer from "./container/Footer";
 
 const Homepage = () => {
   return (

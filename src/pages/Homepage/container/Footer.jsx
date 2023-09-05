@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import Button from "../../components/common/Button";
+import Button from "../../../components/common/Button";
 
 const Footer = () => {
   return (

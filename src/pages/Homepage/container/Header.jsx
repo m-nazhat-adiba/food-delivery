@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../components/common/Button";
-import StackedRateCard from "../../components/common/StackedRateCard";
+import Button from "../../../components/common/Button";
+import StackedRateCard from "../../../components/common/StackedRateCard";
 
 const Header = () => {
   return (

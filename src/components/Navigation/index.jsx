@@ -1,6 +1,6 @@
 import React from "react";
-import Navlist from "./Navlist";
-import NavUtility from "./NavUtility";
+import Navlist from "./container/Navlist";
+import NavUtility from "./container/NavUtility";
 
 const NavBar = () => {
   return (

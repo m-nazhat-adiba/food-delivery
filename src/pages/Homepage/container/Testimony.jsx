@@ -1,7 +1,6 @@
 import React from "react";
-import RateCard from "../../components/common/RateCard";
-import StackedRateCard from "../../components/common/StackedRateCard";
-
+import RateCard from "../../../components/common/RateCard";
+import StackedRateCard from "../../../components/common/StackedRateCard";
 const Testimony = () => {
   return (
     <div className="flex gap-28">
