@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import axios from "axios";
 import InputField from "../../components/common/Input";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router";
-import axios from "axios";
 
 const Login = ({ handleSwitchToRegister }) => {
   const [email, setEmail] = useState("");
@@ -15,7 +15,8 @@ const Login = ({ handleSwitchToRegister }) => {
   const handleChangePw = (e) => {
     setPw(e.target.value);
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const payload = {
       username: email,
       password: pw,
@@ -24,7 +25,7 @@ const Login = ({ handleSwitchToRegister }) => {
       .post("https://api.mudoapi.tech/login", payload)
       .then((res) => {
         console.log(res);
-        localStorage.setItem("token", res.token);
+        localStorage.setItem("token", res.data.data.token);
         navigate("/");
       })
       .catch((err) => {
