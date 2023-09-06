@@ -7,7 +7,7 @@ export const ProductList = ({ filter }) => {
 
   const getFoodData = () => {
     axios
-      .get(`https://api.mudoapi.tech/menus?perPage=8&page=1&type=${filter}`)
+      .get(`https://api.mudoapi.tech/menus?perPage=4&page=1&type=${filter}`)
       .then((res) => {
         setFoodData(res?.data.data.Data);
       })
