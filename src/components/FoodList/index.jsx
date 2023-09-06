@@ -22,7 +22,7 @@ export const ProductList = () => {
   console.log(foodData);
 
   return (
-    <div className="w-full grid grid-cols-5 gap-10">
+    <div className="w-full grid grid-cols-4 gap-10">
       {foodData.map((item) => (
         <ProductCard productData={item} key={item.id} />
       ))}
