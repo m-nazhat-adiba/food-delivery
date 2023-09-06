@@ -2,12 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { ProductCard } from "./container/ProductCard";
 
-export const ProductList = () => {
+export const ProductList = ({ filter }) => {
   const [foodData, setFoodData] = useState([]);
 
   const getFoodData = () => {
     axios
-      .get("https://api.mudoapi.tech/menus")
+      .get(`https://api.mudoapi.tech/menus?perPage=8&page=1&type=${filter}`)
       .then((res) => {
         setFoodData(res?.data.data.Data);
       })
@@ -18,7 +18,7 @@ export const ProductList = () => {
 
   useEffect(() => {
     getFoodData();
-  }, []);
+  }, [filter]);
   console.log(foodData);
 
   return (
