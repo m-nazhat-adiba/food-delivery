@@ -13,8 +13,6 @@ const HighlightMenus = () => {
       case "beverage":
         setFilter("beverage");
         break;
-      case "all":
-        setFilter("");
       default:
         null;
     }
@@ -84,7 +82,6 @@ const HighlightMenus = () => {
               Beverage
             </button>
             <button
-              onClick={() => handleFilter("all")}
               className={clsx(
                 "group flex items-center text-xl px-4 py-4 rounded-full",
                 filter === "" ? "bg-red-600 text-white" : "hover:text-red-600"
