@@ -27,7 +27,7 @@ export const ProductCard = ({ productData }) => {
       ></div>
       <div className="z-[2] bg-[#fff] rounded-bl-xl rounded-br-xl pt-3 pb-4 px-6 group-hover:bg-transparent group-hover:relative">
         <span className="uppercase text-sm tracking-[2px] font-medium text-[#868686] text-left">
-          Recipe
+          {productData.type}
         </span>
         <h3 className="mt-1 mb-3 text-gray-800 text-left font-bold text-xl">
           {productData.name}
