@@ -104,7 +104,7 @@ const HighlightMenus = () => {
               Show All
             </button>
           </div>
-          <ProductList />
+          <ProductList filter={filter} />
         </div>
       </div>
     </div>
