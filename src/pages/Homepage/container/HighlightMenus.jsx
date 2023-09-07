@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ProductList } from "../../../components/FoodList";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 const HighlightMenus = () => {
   const [filter, setFilter] = useState("");
@@ -81,25 +82,27 @@ const HighlightMenus = () => {
               </div>
               Beverage
             </button>
-            <button
-              className={clsx(
-                "group flex items-center text-xl px-4 py-4 rounded-full",
-                filter === "" ? "bg-red-600 text-white" : "hover:text-red-600"
-              )}
-            >
-              <div
+            <Link to={"Menus"}>
+              <button
                 className={clsx(
-                  "group-hover:bg-white p-3 rounded-full mr-2",
-                  filter === "" ? "bg-white text-white" : null
+                  "group flex items-center text-xl px-4 py-4 rounded-full",
+                  filter === "" ? "bg-red-600 text-white" : "hover:text-red-600"
                 )}
               >
-                <Icon
-                  icon="akar-icons:dot-grid-fill"
-                  className="text-black group-hover:text-red-600"
-                />
-              </div>
-              Show All
-            </button>
+                <div
+                  className={clsx(
+                    "group-hover:bg-white p-3 rounded-full mr-2",
+                    filter === "" ? "bg-white text-white" : null
+                  )}
+                >
+                  <Icon
+                    icon="akar-icons:dot-grid-fill"
+                    className="text-black group-hover:text-red-600"
+                  />
+                </div>
+                Show All
+              </button>
+            </Link>
           </div>
           <ProductList filter={filter} />
         </div>
