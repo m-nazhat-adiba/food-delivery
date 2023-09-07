@@ -1,5 +1,6 @@
 import Homepage from "../pages/Homepage";
 import LoginPage from "../pages/LoginRegister";
+import Menus from "../pages/Menus";
 import ProtectedRoute from "./ProtectedRoute";
 
 export const routes = [
@@ -9,9 +10,13 @@ export const routes = [
   },
   {
     path: "/",
+    element: <Homepage />,
+  },
+  {
+    path: "/menus",
     element: (
       <ProtectedRoute>
-        <Homepage />
+        <Menus />
       </ProtectedRoute>
     ),
   },
