@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import Button from "../../common/Button";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 
 const NavUtility = () => {
   const [searchView, setSearchView] = useState(false);
+  const [token, setToken] = useState(localStorage.getItem("token"));
+
+  const handleLogout = () => {
+    setToken(localStorage.removeItem("token"));
+  };
+
   const handleSearchView = (isOpen = "close") => {
     if (isOpen === "open") {
       setSearchView(true);
@@ -46,9 +52,15 @@ const NavUtility = () => {
         />
       </div>
       <Icon icon="akar-icons:shopping-bag" className="text-2xl" />
-      <Link to={"/authentication"}>
-        <Button variant="primary">Login</Button>
-      </Link>
+      {!token || token === "undefined" ? (
+        <Link to={"/authentication"}>
+          <Button variant="primary">Login</Button>
+        </Link>
+      ) : (
+        <Button target={handleLogout} variant="primary">
+          Logout
+        </Button>
+      )}
     </div>
   );
 };
