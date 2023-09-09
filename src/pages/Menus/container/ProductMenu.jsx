@@ -3,7 +3,7 @@ import axios from "axios";
 import { ProductCard } from "../../../components/FoodList/container/ProductCard";
 import DefaultPagination from "../../../components/common/Pagination";
 
-function ProductMenu({ search }) {
+function ProductMenu({ handleDetail }) {
   const [menus, setMenus] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [nextPage, setNextPage] = useState(1);
@@ -32,7 +32,11 @@ function ProductMenu({ search }) {
     <div className="w-full flex flex-col items-center gap-12">
       <div className="w-full grid grid-cols-5 gap-12">
         {menus.map((item) => (
-          <ProductCard productData={item} key={item.id} />
+          <ProductCard
+            handleDetail={handleDetail}
+            productData={item}
+            key={item.id}
+          />
         ))}
       </div>
       <DefaultPagination
