@@ -6,7 +6,6 @@ import axios from "axios";
 const Register = ({ handleSwitchToRegister }) => {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
-  const [pw2, setPw2] = useState("");
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
@@ -33,7 +32,7 @@ const Register = ({ handleSwitchToRegister }) => {
         console.log(err);
       });
   };
-  console.log("eventHandler:", email, pw, pw2);
+  console.log("eventHandler:", email, pw);
   return (
     <div>
       <h1 className="text-xl mb-4">Create your Account</h1>
@@ -44,11 +43,13 @@ const Register = ({ handleSwitchToRegister }) => {
       <p className="text-xs my-6">or sign up with email</p>
       <form className="flex flex-col gap-6">
         <InputField
+          data={email}
           onChange={handleChangeEmail}
           id="username"
           placeholder="Email Address"
         />
         <InputField
+          data={pw}
           onChange={handleChangePw}
           id="password"
           placeholder="Password"
