@@ -1,9 +1,12 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-export const ProductCard = ({ productData }) => {
+export const ProductCard = ({ productData, handleDetail }) => {
   return (
-    <div className="group hover:shadow-2xl hover:scale-110 mr-6 duration-300 transition-all bg-[#fff] w-full relative rounded-xl overflow-hidden shadow-lg ">
+    <div
+      onClick={() => handleDetail(productData.id)}
+      className="group hover:shadow-2xl hover:scale-110 mr-6 duration-300 transition-all bg-[#fff] w-full relative rounded-xl overflow-hidden shadow-lg "
+    >
       <div className="absolute flex justify-between p-4 w-full opacity-0 top-0 group-hover:opacity-100">
         <Icon className="text-xl text-[#AD7D52]" icon="akar-icons:heart" />
         <div className="float-right flex items-center">
