@@ -22,7 +22,7 @@ export const routes = [
     ),
   },
   {
-    path: "/product",
+    path: "/product/:userId",
     element: (
       <ProtectedRoute>
         <ProductPage />
