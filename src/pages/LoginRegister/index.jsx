@@ -13,7 +13,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="bg-red-100 flex flex-col justify-center h-screen ">
+    <div
+      style={{ backgroundImage: `url("src/assets/login-bg.jpg")` }}
+      className="flex flex-col justify-center h-screen "
+    >
       <div className="bg-white flex shadow-lg rounded-lg w-[60%] mx-auto">
         <div className="w-[60%] h-auto p-8">
           <img src="src/assets/login-banner.png" className="rounded-xl" />
