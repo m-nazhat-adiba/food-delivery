@@ -44,11 +44,13 @@ const Login = ({ handleSwitchToRegister }) => {
       <p className="text-xs my-8">or sign in with email</p>
       <form className="flex flex-col gap-6">
         <InputField
+          data={email}
           onChange={handleChangeEmail}
           id="username"
           placeholder="Username"
         />
         <InputField
+          data={pw}
           onChange={handleChangePw}
           id="password"
           placeholder="Password"
