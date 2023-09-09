@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="flex justify-between gap-32">
       <div className="flex flex-col w-[25%]">
-        <img src="src/assets/icon.png" className="w-[50%]" />
+        <img src="/src/assets/icon.png" className="w-[50%]" />
         <p className="py-6">
           Our job is to filling your tummy with delicious food, with fast and
           free delivery
