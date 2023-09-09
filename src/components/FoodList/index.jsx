@@ -1,9 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { ProductCard } from "./container/ProductCard";
+import { useNavigate } from "react-router";
 
 export const ProductList = ({ filter }) => {
   const [foodData, setFoodData] = useState([]);
+  const navigate = useNavigate();
+  const handleDetail = (id) => {
+    navigate(`/product/${id}`);
+  };
 
   const getFoodData = () => {
     axios
@@ -24,7 +29,11 @@ export const ProductList = ({ filter }) => {
   return (
     <div className="w-full grid grid-cols-4 gap-10">
       {foodData.map((item) => (
-        <ProductCard productData={item} key={item.id} />
+        <ProductCard
+          handleDetail={handleDetail}
+          productData={item}
+          key={item.id}
+        />
       ))}
     </div>
   );
