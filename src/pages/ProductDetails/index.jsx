@@ -5,13 +5,15 @@ import NavBar from "../../components/Navigation";
 import Details from "./container/Details";
 import Footer from "../Homepage/container/Footer";
 import Checkout from "./container/Checkout";
+import { useParams } from "react-router";
 
 const ProductDetails = () => {
   const [detail, setDetail] = useState({});
+  const param = useParams();
 
   const getDetails = () => {
     axios
-      .get("https://api.mudoapi.tech/menu/2")
+      .get(`https://api.mudoapi.tech/menu/${param?.userId}`)
       .then((res) => {
         setDetail(res?.data?.data);
       })
