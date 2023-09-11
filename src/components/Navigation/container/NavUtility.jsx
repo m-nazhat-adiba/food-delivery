@@ -21,12 +21,15 @@ const NavUtility = () => {
   };
 
   return (
-    <div className="flex gap-5 items-center bg-white relative">
+    <div className="flex flex-col lg:flex-row gap-5 items-center bg-white relative">
       <div
-        className={clsx("flex border-2 w-fit items-center rounded-full ", {
-          "border-gray-300": searchView,
-          "border-transparent": !searchView,
-        })}
+        className={clsx(
+          "lg:flex border-2 w-fit items-center rounded-full hidden",
+          {
+            "border-gray-300": searchView,
+            "border-transparent": !searchView,
+          }
+        )}
       >
         {searchView ? (
           <Icon
@@ -51,15 +54,20 @@ const NavUtility = () => {
           className="text-2xl mx-2"
         />
       </div>
-      <Icon icon="akar-icons:shopping-bag" className="text-2xl" />
+      <Icon
+        icon="akar-icons:shopping-bag"
+        className="text-2xl hidden lg:block"
+      />
       {!token || token === "undefined" ? (
         <Link to={"/authentication"}>
           <Button variant="primary">Login</Button>
         </Link>
       ) : (
-        <Button target={handleLogout} variant="primary">
-          Logout
-        </Button>
+        <div className="w-full lg:w-fit">
+          <Button target={handleLogout} variant="primary">
+            Logout
+          </Button>
+        </div>
       )}
     </div>
   );
