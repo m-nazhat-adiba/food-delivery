@@ -5,28 +5,28 @@ import ProductMenu from "./container/ProductMenu";
 import Footer from "../Homepage/container/Footer";
 import { useNavigate } from "react-router";
 
-function index() {
+function ProductPage() {
   const navigate = useNavigate();
   const handleDetail = (id) => {
     navigate(`/product/${id}`);
   };
 
   return (
-    <div>
-      <div className="container mx-auto">
+    <div className="container mx-auto">
+      <div className="px-3 lg:px-0">
         <NavBar />
       </div>
-      <div className="container mx-auto px-12">
+      <div className="px-6 md:px-12">
         <Header />
       </div>
-      <div className="container mx-auto mt-10 px-12 flex flex-col items-center gap-10">
+      <div className="mt-4 md:mt-10 px-6 md:px-12 flex flex-col items-center gap-10">
         <ProductMenu handleDetail={handleDetail} />
       </div>
-      <div className="container mx-auto mt-24 mb-10">
+      <div className="px-6 md:px-2 xl:px-0 mt-24 mb-10">
         <Footer />
       </div>
     </div>
   );
 }
 
-export default index;
+export default ProductPage;

@@ -8,15 +8,13 @@ const VARIANTS = {
 
 const Button = ({ children, variant, target }) => {
   return (
-    <div>
-      <button
-        onClick={target}
-        type="button"
-        className={`py-3 px-4 rounded-lg font-bold  ${VARIANTS[variant]}`}
-      >
-        {children}
-      </button>
-    </div>
+    <button
+      onClick={target}
+      type="button"
+      className={`py-3 px-4 w-full rounded-lg font-bold  ${VARIANTS[variant]}`}
+    >
+      {children}
+    </button>
   );
 };
 

@@ -27,7 +27,7 @@ export const ProductList = ({ filter }) => {
   console.log(foodData);
 
   return (
-    <div className="w-full grid grid-cols-4 gap-10">
+    <div className="w-full grid grid-cols-2 xl:grid-cols-4 gap-4 2xl:gap-10">
       {foodData.map((item) => (
         <ProductCard
           handleDetail={handleDetail}

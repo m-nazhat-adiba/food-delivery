@@ -4,9 +4,9 @@ import Button from "../../../components/common/Button";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between gap-32">
-      <div className="flex flex-col w-[25%]">
-        <img src="/src/assets/icon.png" className="w-[50%]" />
+    <div className="flex flex-col md:flex-row md:justify-between gap-12 xl:gap-32">
+      <div className="flex flex-col md:w-[25%]">
+        <img src="/src/assets/icon.png" className="w-[50%] md:w-[80%]" />
         <p className="py-6">
           Our job is to filling your tummy with delicious food, with fast and
           free delivery
@@ -18,24 +18,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex w-[70%] justify-between">
-        <div className="flex flex-col">
-          <p className="font-bold text-xl pb-4">About</p>
-          <ul className="flex flex-col gap-2">
-            <li>
-              <a>About Us</a>
-            </li>
-            <li>
-              <a>Features</a>
-            </li>
-            <li>
-              <a>News</a>
-            </li>
-            <li>
-              <a>Menu</a>
-            </li>
-          </ul>
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 md:w-[60%] gap-10 md:gap-16 md:pl-8">
         <div className="flex flex-col">
           <p className="font-bold text-xl pb-4">Company</p>
           <ul className="flex flex-col gap-2">
@@ -73,12 +56,29 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col w-[30%]">
-          <p className="font-bold text-lg pb-5">
-            Get in touch with us. We'd love to hear from you.
-          </p>
-          <Button variant="outline">Email Address</Button>
+        <div className="flex flex-col">
+          <p className="font-bold text-xl pb-4">About</p>
+          <ul className="flex flex-col gap-2">
+            <li>
+              <a>About Us</a>
+            </li>
+            <li>
+              <a>Features</a>
+            </li>
+            <li>
+              <a>News</a>
+            </li>
+            <li>
+              <a>Menu</a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div className="flex flex-col md:w-[30%] items-center md:items-start">
+        <p className="font-bold text-lg pb-5 text-center md:text-start">
+          Get in touch with us. We'd love to hear from you.
+        </p>
+        <Button variant="outline">Email Address</Button>
       </div>
     </div>
   );

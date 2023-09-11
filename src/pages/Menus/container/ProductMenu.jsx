@@ -30,7 +30,7 @@ function ProductMenu({ handleDetail }) {
 
   return (
     <div className="w-full flex flex-col items-center gap-12">
-      <div className="w-full grid grid-cols-5 gap-12">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-12">
         {menus.map((item) => (
           <ProductCard
             handleDetail={handleDetail}

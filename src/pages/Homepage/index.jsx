@@ -10,23 +10,25 @@ import Footer from "./container/Footer";
 const Homepage = () => {
   return (
     <div className="container mx-auto">
-      <NavBar />
-      <div className="mt-5">
+      <div className="px-6 xl:px-0">
+        <NavBar />
+      </div>
+      <div className="px-6 xl:px-0 mt-5">
         <Header />
       </div>
-      <div className="mt-28">
+      <div className="px-6 xl:px-0 mt-28">
         <BenefitSection />
       </div>
-      <div className="mt-40">
+      <div className="px-6 2xl:px-8 mt-28 xl:mt-40">
         <HighlightMenus />
       </div>
-      <div className="mt-36">
+      <div className="px-6 xl:px-0 mt-28 xl:mt-36">
         <Testimony />
       </div>
-      <div className="mt-60">
+      <div className="px-6 xl:px-0 mt-32 xl:mt-60">
         <GetApp />
       </div>
-      <div className="mt-36 mb-14">
+      <div className="mt-36 md:mb-14 mb-10 px-6 xl:px-0">
         <Footer />
       </div>
     </div>
