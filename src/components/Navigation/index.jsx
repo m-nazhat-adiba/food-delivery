@@ -28,7 +28,7 @@ const NavBar = () => {
         className={clsx(
           "lg:flex lg:gap-10 gap-3",
           navBarOpen
-            ? "flex flex-col absolute top-20 w-full pb-4 px-4 rounded-lg bg-white shadow-lg"
+            ? "flex flex-col absolute z-50 top-20 w-full pb-4 px-4 rounded-lg bg-white shadow-lg"
             : "hidden"
         )}
       >
