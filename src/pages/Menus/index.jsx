@@ -13,16 +13,16 @@ function ProductPage() {
 
   return (
     <div className="container mx-auto">
-      <div className="px-3 lg:px-0">
+      <div className="px-6 xl:px-0">
         <NavBar />
       </div>
-      <div className="px-6 md:px-12">
+      <div className="px-6 md:px-10 2xl:px-12">
         <Header />
       </div>
-      <div className="mt-4 md:mt-10 px-6 md:px-12 flex flex-col items-center gap-10">
+      <div className="mt-4 md:mt-10 px-6 md:px-10 2xl:px-12 flex flex-col items-center gap-10">
         <ProductMenu handleDetail={handleDetail} />
       </div>
-      <div className="px-6 md:px-2 xl:px-0 mt-24 mb-10">
+      <div className="px-6 xl:px-0 mt-24 mb-10">
         <Footer />
       </div>
     </div>
