@@ -5,16 +5,17 @@ const InputField = ({ id, placeholder, onChange, data }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
-    if (data) {
+    if (data != 0) {
       setIsFocused(true);
     } else {
       setIsFocused(false);
     }
   }, [data]);
+  console.log(isFocused);
 
   return (
     <div>
-      <label className="flex flex-col relative focus group">
+      <label className="flex flex-col relative">
         <input
           onFocus={() => setIsFocused(true)}
           onBlur={() => (data ? null : setIsFocused(false))}
@@ -27,7 +28,7 @@ const InputField = ({ id, placeholder, onChange, data }) => {
         <span
           className={clsx(
             "absolute text-xs transform translate-y-3 leading-3 left-2 transition ",
-            isFocused ? "-translate-y-4" : null
+            isFocused ? "-translate-y-5" : null
           )}
         >
           {placeholder}
