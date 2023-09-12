@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
 
-const NavUtilityLg = () => {
+const NavUtilityLg = ({ handleSearch, handleSearchSubmit, value }) => {
   const [searchView, setSearchView] = useState(false);
 
   const handleSearchView = (isOpen = "close") => {
@@ -31,6 +31,8 @@ const NavUtilityLg = () => {
           />
         ) : null}
         <input
+          onChange={handleSearch}
+          value={value}
           className={clsx(
             "my-2  bg-transparent focus:outline-none duration-300",
             {
@@ -41,7 +43,9 @@ const NavUtilityLg = () => {
           placeholder="Search Menu"
         />
         <Icon
-          onClick={() => handleSearchView(searchView ? "close" : "open")}
+          onClick={() =>
+            handleSearchView(searchView ? handleSearchSubmit() : "open")
+          }
           icon="akar-icons:search"
           className="text-2xl mx-2"
         />
