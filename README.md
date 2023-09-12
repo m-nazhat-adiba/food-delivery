@@ -2,6 +2,11 @@
 
 This project was built using React + Vite.
 
+Current additional features in this project:
+
+- Search Product
+- Filter Product by Category
+
 Used libraries:
 
 - Taiwlind CSS + PostCSS + Autoprefixer
