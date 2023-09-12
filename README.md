@@ -1,4 +1,15 @@
-# React + Vite
+# Mudocafe Food Delivery
+
+This project was built using React + Vite.
+
+Used libraries:
+
+- Taiwlind CSS + PostCSS + Autoprefixer
+- CLSX
+- react-router
+- react-router-dom
+- Axios
+- iconify/react
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
