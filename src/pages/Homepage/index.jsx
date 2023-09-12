@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./container/Header";
 import BenefitSection from "./container/BenefitSection";
 import NavBar from "../../components/Navigation/index";
@@ -6,12 +6,26 @@ import HighlightMenus from "./container/HighlightMenus";
 import Testimony from "./container/Testimony";
 import GetApp from "./container/GetApp";
 import Footer from "./container/Footer";
+import { useNavigate } from "react-router";
 
 const Homepage = () => {
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+  const handleSearchSubmit = () => {
+    !searchTerm ? null : navigate(`/menus?menu=${searchTerm}`);
+  };
+
   return (
     <div className="container mx-auto">
       <div className="px-6 xl:px-0">
-        <NavBar />
+        <NavBar
+          handleSearch={handleSearch}
+          handleSearchSubmit={handleSearchSubmit}
+        />
       </div>
       <div className="px-6 xl:px-0 mt-5">
         <Header />
