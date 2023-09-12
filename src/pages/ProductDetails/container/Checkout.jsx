@@ -26,7 +26,7 @@ const Checkout = ({ productData }) => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-8 lg:mt-0">
         <div className="flex flex-col justify-between my-5">
           <div className="flex justify-between items-center">
             <p className="text-2xl font-semibold">Subtotal </p>

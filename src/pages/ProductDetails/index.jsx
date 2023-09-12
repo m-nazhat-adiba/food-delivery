@@ -28,21 +28,21 @@ const ProductDetails = () => {
 
   return (
     <div className="container mx-auto">
-      <div>
+      <div className="px-6 xl:px-0">
         <NavBar />
       </div>
-      <div className="my-4 px-8">
+      <div className="my-4 px-6 xl:px-8">
         <Header productData={detail} />
       </div>
-      <div className="flex justify-between px-8 h-full">
-        <div className="w-[55%]">
+      <div className="flex flex-col lg:flex-row justify-between px-6 h-full">
+        <div className="lg:w-[55%]">
           <Details productData={detail} />
         </div>
-        <div className="w-[28%] my-5">
+        <div className="lg:w-[35%] xl:w-[28%] my-5">
           <Checkout productData={detail} />
         </div>
       </div>
-      <div className="mb-8 mt-20">
+      <div className="px-6 xl:px-0 mb-8 mt-20">
         <Footer />
       </div>
     </div>
