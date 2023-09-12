@@ -8,7 +8,7 @@ import clsx from "clsx";
 const Login = ({ handleSwitchToRegister }) => {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
-  const [isError, setIsError] = useState(false);
+  const [isError, setIsError] = useState({});
   const navigate = useNavigate();
 
   const handleChangeEmail = (e) => {
@@ -31,8 +31,8 @@ const Login = ({ handleSwitchToRegister }) => {
         navigate("/");
       })
       .catch((err) => {
-        setIsError(true);
-        console.log(err);
+        setIsError(err.response.data);
+        console.log(err.response.data);
       });
   };
   console.log("eventHandler:", email, pw);
@@ -60,7 +60,7 @@ const Login = ({ handleSwitchToRegister }) => {
         />
         <div className="flex flex-col w-full">
           <p className={clsx("text-red-600", isError ? "block" : "hidden")}>
-            Account is invalid!
+            {isError.message}
           </p>
           <button
             onClick={handleSubmit}
