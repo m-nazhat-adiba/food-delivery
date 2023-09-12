@@ -35,14 +35,14 @@ const Login = ({ handleSwitchToRegister }) => {
   console.log("eventHandler:", email, pw);
 
   return (
-    <div>
+    <div className="py-8 w-full flex flex-col">
       <h1 className="text-xl mb-4">Login to your Account</h1>
-      <button className="flex items-center gap-2 border-2 px-10 py-1 justify-center rounded-lg">
+      <button className="flex items-center gap-2 border-2 px-4 md:px-6 lg:px-12 py-2 justify-center rounded-lg">
         <Icon icon="akar-icons:google-fill" />
-        <p>Login with Google</p>
+        <p className="text-base">Login with Google</p>
       </button>
-      <p className="text-xs my-8">or sign in with email</p>
-      <form className="flex flex-col gap-6">
+      <p className="text-xs my-6">or sign in with email</p>
+      <form className="flex flex-col w-full gap-6">
         <InputField
           data={email}
           onChange={handleChangeEmail}

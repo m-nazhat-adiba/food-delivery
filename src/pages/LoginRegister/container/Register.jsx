@@ -34,19 +34,19 @@ const Register = ({ handleSwitchToRegister }) => {
   };
   console.log("eventHandler:", email, pw);
   return (
-    <div>
+    <div className="py-8 w-full flex flex-col">
       <h1 className="text-xl mb-4">Create your Account</h1>
-      <button className="flex items-center gap-2 border-2 px-10 py-1 justify-center rounded-lg">
+      <button className="flex items-center gap-2 border-2 px-4 md:px-6 lg:px-12 py-2 justify-center rounded-lg">
         <Icon icon="akar-icons:google-fill" />
-        <p>Sign up with Google</p>
+        <p className="text-base">Sign up with Google</p>
       </button>
       <p className="text-xs my-6">or sign up with email</p>
-      <form className="flex flex-col gap-6">
+      <form className="flex flex-col w-full gap-6">
         <InputField
           data={email}
           onChange={handleChangeEmail}
           id="username"
-          placeholder="Email Address"
+          placeholder="Username"
         />
         <InputField
           data={pw}
