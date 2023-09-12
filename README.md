@@ -7,7 +7,7 @@ Current additional features in this project:
 - Search Product
 - Filter Product by Category
 
-Used libraries:
+Used libraries/frameworks:
 
 - Tailwind CSS + PostCSS + Autoprefixer
 - CLSX
