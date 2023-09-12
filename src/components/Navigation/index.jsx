@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
 
-const NavBar = () => {
+const NavBar = ({ handleSearch, handleSearchSubmit, value }) => {
   const [navBarOpen, setNavbarOpen] = useState(false);
   return (
     <div className="flex flex-col lg:flex-row justify-between py-5 relative">
@@ -15,7 +15,11 @@ const NavBar = () => {
           <img src="/src/assets/icon.png" className="h-8 md:h-12 w-auto" />
         </Link>
         <div className="flex gap-3 items-center">
-          <NavUtilityLg />
+          <NavUtilityLg
+            handleSearch={handleSearch}
+            handleSearchSubmit={handleSearchSubmit}
+            value={value}
+          />
           <button
             onClick={() => setNavbarOpen(!navBarOpen)}
             className="text-4xl block lg:hidden"
@@ -33,7 +37,11 @@ const NavBar = () => {
         )}
       >
         <Navlist />
-        <NavUtility />
+        <NavUtility
+          handleSearch={handleSearch}
+          handleSearchSubmit={handleSearchSubmit}
+          value={value}
+        />
       </div>
     </div>
   );
