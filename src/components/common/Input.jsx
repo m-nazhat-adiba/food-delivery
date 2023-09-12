@@ -23,7 +23,7 @@ const InputField = ({ id, placeholder, onChange, data }) => {
           type={id}
           name={id}
           required
-          className="border-2 border-gray-300 px-4 py-2 text-xs"
+          className="border-2 border-gray-300 px-4 py-2 text-xs rounded-lg"
         />
         <span
           className={clsx(
