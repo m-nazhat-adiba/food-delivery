@@ -14,15 +14,15 @@ const LoginPage = () => {
 
   return (
     <div
-      style={{ backgroundImage: `url("src/assets/login-bg.jpg")` }}
-      className="flex flex-col justify-center h-screen w-screen bg-cover bg-right"
+      // style={{ backgroundImage: `url("/src/assets/login-bg.jpg")` }}
+      className="flex flex-col justify-center h-screen w-screen bg-cover bg-right bg-gray-50"
     >
-      <div className="bg-white flex flex-col md:flex-row shadow-lg rounded-lg w-[90%] xl:w-[75%] 2xl:w-[60%] mx-auto">
+      <div className="bg-white flex flex-col md:flex-row shadow-xl rounded-lg w-[90%] xl:w-[75%] 2xl:w-[60%] mx-auto">
         <div className="block w-full md:hidden">
           <img src="/src/assets/icon.png" className="w-full px-6 pt-8" />
         </div>
         <div className="hidden md:block w-[60%] h-auto p-8">
-          <img src="src/assets/login-banner.png" className="rounded-xl" />
+          <img src="/src/assets/login-banner.png" className="rounded-xl" />
         </div>
         <div className="text-center mx-8 lg:mx-auto my-auto">
           {showRegister ? (
