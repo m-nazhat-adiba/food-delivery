@@ -9,7 +9,7 @@ Current additional features in this project:
 
 Used libraries:
 
-- Taiwlind CSS + PostCSS + Autoprefixer
+- Tailwind CSS + PostCSS + Autoprefixer
 - CLSX
 - react-router
 - react-router-dom
