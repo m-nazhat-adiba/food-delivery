@@ -6,6 +6,7 @@ import axios from "axios";
 const Register = ({ handleSwitchToRegister }) => {
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
+  const [isError, setIsError] = useState({});
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
@@ -29,6 +30,7 @@ const Register = ({ handleSwitchToRegister }) => {
         handleSwitchToRegister("close");
       })
       .catch((err) => {
+        setIsError(err.response.data);
         console.log(err);
       });
   };
@@ -54,13 +56,16 @@ const Register = ({ handleSwitchToRegister }) => {
           id="password"
           placeholder="Password"
         />
-        <button
-          onClick={handleSubmit}
-          type="submit"
-          className="mt-4 px-4 py-2 bg-red-700 text-white rounded-full hover:bg-red-600"
-        >
-          Create Account
-        </button>
+        <div className="flex flex-col w-full">
+          <p className="text-red-600">{isError.message}</p>
+          <button
+            onClick={handleSubmit}
+            type="submit"
+            className="mt-4 px-4 py-2 bg-red-700 text-white rounded-full hover:bg-red-600"
+          >
+            Create Account
+          </button>
+        </div>
       </form>
       <p className="text-xs mt-4">
         Already have an account?
