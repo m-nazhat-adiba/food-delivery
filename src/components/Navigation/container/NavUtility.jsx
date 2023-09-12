@@ -64,9 +64,11 @@ const NavUtility = () => {
         </Link>
       ) : (
         <div className="w-full lg:w-fit">
-          <Button target={handleLogout} variant="primary">
-            Logout
-          </Button>
+          <Link to={"/"}>
+            <Button target={handleLogout} variant="primary">
+              Logout
+            </Button>
+          </Link>
         </div>
       )}
     </div>
