@@ -7,9 +7,9 @@ Current additional features in this project:
 - Search Product
 - Filter Product by Category
 
-Used libraries:
+Used libraries/frameworks:
 
-- Taiwlind CSS + PostCSS + Autoprefixer
+- Tailwind CSS + PostCSS + Autoprefixer
 - CLSX
 - react-router
 - react-router-dom
