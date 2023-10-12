@@ -23,7 +23,7 @@ const Header = () => {
           </div>
         </div>
         <img
-          src="src/assets/Banner.png"
+          src="./src/assets/Banner.png"
           className="xl:w-[60%] md:w-[50%] w-full h-full "
         />
       </div>
