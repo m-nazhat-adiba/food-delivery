@@ -5,6 +5,7 @@ import NavUtilityLg from "./container/NavUtilityLg";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
+import Logo from "../../assets/icon.png";
 
 const NavBar = ({ handleSearch, handleSearchSubmit, value }) => {
   const [navBarOpen, setNavbarOpen] = useState(false);
@@ -12,7 +13,7 @@ const NavBar = ({ handleSearch, handleSearchSubmit, value }) => {
     <div className="flex flex-col lg:flex-row justify-between py-5 relative">
       <div className="flex w-full lg:w-auto justify-between">
         <Link className="flex my-auto" to={"/"}>
-          <img src="/src/assets/icon.png" className="h-8 md:h-12 w-auto" />
+          <img src={Logo} className="h-8 md:h-12 w-auto" />
         </Link>
         <div className="flex gap-3 items-center">
           <NavUtilityLg

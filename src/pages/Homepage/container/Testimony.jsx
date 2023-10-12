@@ -1,11 +1,12 @@
 import React from "react";
 import RateCard from "../../../components/common/RateCard";
 import StackedRateCard from "../../../components/common/StackedRateCard";
+import Testimoni from "../../../assets/Testimony-Banner.png";
 const Testimony = () => {
   return (
     <div className="flex flex-col md:flex-row md:gap-10 lg:gap-28">
       <div className="w-[85%] md:w-full lg:w-[80%] h-auto relative">
-        <img src="src/assets/Testimony-Banner.png" />
+        <img src={Testimoni} />
         <div className="absolute bottom-0 right-0 md:bottom-auto lg:bottom-0 bg-white px-4 py-6 rounded-2xl shadow-lg">
           <StackedRateCard />
         </div>

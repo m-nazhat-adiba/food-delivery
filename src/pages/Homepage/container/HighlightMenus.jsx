@@ -3,6 +3,7 @@ import { ProductList } from "../../../components/FoodList";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
+import Promo from "../../../assets/promo-banner.png";
 
 const HighlightMenus = () => {
   const [filter, setFilter] = useState("");
@@ -34,7 +35,7 @@ const HighlightMenus = () => {
       </div>
       <div className="flex flex-col gap-14">
         <div>
-          <img src="src/assets/promo-banner.png" />
+          <img src={Promo} />
         </div>
         <div className="flex flex-col md:flex-row gap-16 lg:gap-32 ">
           <div className="flex flex-row justify-center md:justify-start md:flex-col w-full md:w-80 gap-2">

@@ -1,12 +1,13 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Button from "../../../components/common/Button";
+import Logo from "../../../assets/icon.png";
 
 const Footer = () => {
   return (
     <div className="flex flex-col md:flex-row md:justify-between gap-12 xl:gap-32">
       <div className="flex flex-col md:w-[25%]">
-        <img src="/src/assets/icon.png" className="w-[50%] md:w-[80%]" />
+        <img src={Logo} className="w-[50%] md:w-[80%]" />
         <p className="py-6">
           Our job is to filling your tummy with delicious food, with fast and
           free delivery

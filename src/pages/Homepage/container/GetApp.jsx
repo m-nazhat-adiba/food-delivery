@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../../components/common/Button";
+import GetAppIllust from "../../../assets/get-the-app.png";
 
 const GetApp = () => {
   return (
@@ -19,7 +20,7 @@ const GetApp = () => {
         </div>
       </div>
       <div className="md:w-[100%] h-fit mt-auto">
-        <img src="src/assets/get-the-app.png" />
+        <img src={GetAppIllust} />
       </div>
     </div>
   );

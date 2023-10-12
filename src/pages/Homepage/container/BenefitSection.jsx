@@ -1,4 +1,7 @@
 import React from "react";
+import Benefit1 from "../../../assets/benefit-1.png";
+import Benefit2 from "../../../assets/benefit-2.png";
+import Benefit3 from "../../../assets/benefit-3.png";
 
 const BenefitSection = () => {
   return (
@@ -13,14 +16,14 @@ const BenefitSection = () => {
       </div>
       <div className="grid grid-col-1 md:grid-cols-3 gap-2 xl:gap-32 md:gap-10 my-4">
         <div className="flex flex-col xl:px-24 px-10">
-          <img src="src/assets/benefit-1.png" className="py-5" />
+          <img src={Benefit1} className="py-5" />
           <p className="text-2xl font-bold text-center pb-3">Easy To Order</p>
           <p className="text-lg text-center">
             You only need a few steps in ordering foods
           </p>
         </div>
         <div className="flex flex-col xl:px-24 px-10">
-          <img src="src/assets/benefit-2.png" className="py-5" />
+          <img src={Benefit2} className="py-5" />
           <p className="text-2xl font-bold text-center pb-3">
             Fastest Delivery
           </p>
@@ -29,7 +32,7 @@ const BenefitSection = () => {
           </p>
         </div>
         <div className="flex flex-col xl:px-24 px-10">
-          <img src="src/assets/benefit-3.png" className="py-5" />
+          <img src={Benefit3} className="py-5" />
           <p className="text-2xl font-bold text-center pb-3">Best Quality</p>
           <p className="text-lg text-center">
             Not only fast for us quality is also number one
