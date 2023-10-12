@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../../components/common/Button";
 import StackedRateCard from "../../../components/common/StackedRateCard";
+import Banner from "../../../assets/Banner.png";
 
 const Header = () => {
   return (
@@ -22,10 +23,7 @@ const Header = () => {
             <StackedRateCard />
           </div>
         </div>
-        <img
-          src="./src/assets/Banner.png"
-          className="xl:w-[60%] md:w-[50%] w-full h-full "
-        />
+        <img src={Banner} className="xl:w-[60%] md:w-[50%] w-full h-full " />
       </div>
     </div>
   );
